@@ -1,0 +1,35 @@
+name: WeiBo_SuperTopics
+ 
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+  schedule:
+    - cron: 0 22 * * *
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Install Python
+      run: |
+        sudo apt update && \
+        sudo apt install python3
+      
+    - name: Pip install requests
+      run: |
+        pip3 install requests      
+         
+    - name: DailyTask
+      run: |
+        python3 task.py <<EOF
+        ${{secrets.COOKIE}}
+        ${{secrets.S}}
+        ${{secrets.PICK}}
+        ${{secrets.SCKEY}}
+        EOF
+        
