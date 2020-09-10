@@ -183,7 +183,7 @@ class WeiBo:
                 msg = f'TopicName：{topic_dict["topic_title"]}\nLevel：{topic_dict["topic_level"]}\nMessage：{success_msg}\n'
                 return self.req_res(status=1, res_name="msg", res=msg)
             elif check_res.json()["result"] == 388000:
-                errmsg = "💢签到异常需要验证，更新Cookie即可解决"
+                errmsg = "💢签到异常需要身份验证，暂未找到合适的解决办法"
                 return self.req_res(status=0, errmsg=errmsg)
         else:
             msg = f'TopicName：{topic_dict["topic_title"]}\nLevel：{topic_dict["topic_level"]}\nMessage：今日已签到\n'
