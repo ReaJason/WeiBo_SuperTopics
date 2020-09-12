@@ -175,10 +175,11 @@ class WeiBo:
                 url=self.check_url,
                 params=check_data,
             )
+            # print(check_res.json())
             if check_res.json().get('errmsg'):
                 errmsg = '{check_res.json()["errmsg"]}/s参数设置有误'
                 return self.req_res(status=0, errmsg=errmsg)
-            if check_res.json()["result"] == 1:
+            if check_res.json()["result"] == '1':
                 success_msg = check_res.json()["msg"].replace("\n", "/")
                 msg = f'TopicName：{topic_dict["topic_title"]}\nLevel：{topic_dict["topic_level"]}\nMessage：{success_msg}\n'
                 return self.req_res(status=1, res_name="msg", res=msg)
@@ -350,6 +351,11 @@ class WeiBo:
             return msg
 
     def yu_yan(self, yu_topic):
+        """
+        喻言超话帖子评论转发点赞
+        :param yu_topic:
+        :return:
+        """
         story_list = self.get_story_list(yu_topic["topic_url"])
         contents = "喻言@THE9-喻言"
         repost_count = 0
