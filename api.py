@@ -374,26 +374,26 @@ class WeiBo:
         delete_comment = 0
         delete_star = 0
         for story in story_list:
-            time.sleep(random.randint(3, 5))
+            time.sleep(random.randint(5, 7))
             st = self.get_st()
             if repost_count < 2:
                 repost_res = self.repost_story(story["story_mid"], st, contents)
                 if repost_res["status"]:
                     repost_count += 1
-                    time.sleep(random.randint(3, 5))
+                    time.sleep(random.randint(5, 7))
                     if self.delete_story(repost_res["repost_dict"]["l_repost_mid"], st):
                         delete_repost += 1
             if comment_count < 6:
                 comment_res = self.comment_story(story["story_mid"], st, contents)
                 if comment_res["status"]:
                     comment_count += 1
-                    time.sleep(random.randint(3, 5))
+                    time.sleep(random.randint(5, 7))
                     if self.delete_comment(comment_res["comment_dict"]["comment_cid"], st):
                         delete_comment += 1
             star_res = self.star_story(story["story_mid"], st)
             if star_res["status"]:
                 star_count += 1
-                time.sleep(random.randint(3, 5))
+                time.sleep(random.randint(5, 7))
                 if self.delete_star(star_res["star_dict"]["star_story_mid"], st):
                     delete_star += 1
         msg = f"转发成功：{repost_count}条、评论成功：{comment_count}条、点赞成功：{star_count}条\n" \
