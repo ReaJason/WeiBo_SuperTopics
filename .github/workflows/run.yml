@@ -1,12 +1,12 @@
 name: WeiBo_SuperTopics
  
- on:
-   push:
-     branches: [ master ]
-   pull_request:
-     branches: [ master ]
-   schedule:
-     - cron: 0 22 * * *
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+  schedule:
+    - cron: 0 22 * * *
 
 jobs:
   build:

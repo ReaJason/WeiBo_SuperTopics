@@ -6,9 +6,11 @@
 >
 > 💢取消 Actions 任务，异地 IP 请求很容易异常，我三个号测试号都异常了
 >
->🚀GitHub Actions 开启就玩玩，大家可以试腾讯云函数 + 固定 IP 看能不能长期有用
+> 🚀GitHub Actions 开启就玩玩，大家可以试腾讯云函数 + 固定 IP 看能不能长期有用
 >
 > ✅Clone 到本地使用更佳，或者使用 Tasker + Termux 来进行手机自动化任务
+>
+> ✨可以试试我写的本地程序：[微博超话工具](https://reajason.top/2020/10/19/WeiBoSuperTopicsTool/)
 
 
 
@@ -186,7 +188,7 @@ def run():
 
 
 ### ⚡更新计划
-1. 增加更多关于微超话的接口，方便自己有时间维护升级我的 [微博超话工具](https://reajason.top/2020/10/19/WeiBoSuperTopicsTool/)
+1. 增加更多关于微博超话的接口，方便自己有时间维护升级我的 [微博超话工具](https://reajason.top/2020/10/19/WeiBoSuperTopicsTool/)
 2. 写一个简易的接口文档，方便有兴趣自己编写工具的人参考（自己抓接口其实更好玩）
 3. ......
 
