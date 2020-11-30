@@ -6,10 +6,10 @@ def run():
     logging.getLogger().setLevel(logging.INFO)
     logging.basicConfig(format="[%(levelname)s]; %(message)s")
     log = []
-    cookie = "*********"
-    s = "*****"
-    pick = "***"
-    sckey = "*******"
+    cookie = input()
+    s = input()
+    pick = input()
+    sckey = input()
     wb = WeiBo(cookie)
     user = wb.get_profile()
     log.append("#### 💫‍User：")
